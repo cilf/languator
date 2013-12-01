@@ -1,0 +1,26 @@
+.languator-holder { position: absolute; font-size: 0.8em;}
+.ui-menu .ui-menu-item a {line-height: normal; padding: 0px 15px 0px 3px;}
+.languator-holder .ui-icon { margin-right: -10px; margin-left: 10px; }
+.languator-holder .languator-holder { width: 200px; }
+.languator-holder .subtitle { color: gray; font-size: 0.6em; padding-left: 3px; }
+.languator-info { font-size: 0.7em; }
+
+.template {display: none}
+.word {font-weight: bold}
+.exampleWrap {font-style: italic}
+
+ul.synonyms {padding-left: 2em;text-indent: -2em; list-style: none}
+
+#synonymTooltip li.synonym{margin-bottom: 3px;}
+#derivedTooltip .derivedWord {text-decoration: underline;}
+#derivedTooltip .synonym {margin-bottom: 1px; }
+.wordHover {color: red; cursor: pointer}
+
+.active-synset {background-color: #EEEEEE}
+.active-word {color: red}
+
+.ukazka p {background-color: #C6E746; padding: 10px; }
+
+body {
+    background: #e0e0e0;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Languator - WYMeditor Demonstration by Marek Polcar</title>
+    <!-- jQuery library  is required, see http://jquery.com/ -->
+    <script type="text/javascript" src="../libs/jquery-1.6.1.js"></script>
+    <script type="text/javascript" src="../libs/jquery-ui.1.9m4.js"></script>
+    <script type="text/javascript" src="../libs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../libs/jquery.json-2.2.min.js"></script>
+    <script type="text/javascript" src="../libs/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript" src="../libs/languator.js"></script>
+
+    <script type="text/javascript" src="src/wymeditor/jquery.wymeditor.js"></script>
+    <script type="text/javascript" src="src/wymeditor/jquery.wymeditor.safari.js"></script>
+    <script type="text/javascript" src="src/wymeditor/jquery.wymeditor.opera.js"></script>
+    <script type="text/javascript" src="src/wymeditor/jquery.wymeditor.mozilla.js"></script>
+    <script type="text/javascript" src="src/wymeditor/jquery.wymeditor.explorer.js"></script>
+
+    <script type="text/javascript" src="languator.wymeditor.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../libs/jquery-ui.1.9m4.css" media="screen,projection"/>
+
+    <link rel="stylesheet" type="text/css" href="../libs/languator.css" media="screen,projection"/>
+
+</head>
+
+<body>
+
+<h1>Languator - WYMeditor Demonstration</h1>
+
+<p>Aims to help with English synonyms, derived words, autosuggestion and spelling easily and efficiently.</p>
+
+<form method="get">
+    <textarea name="text" class="wymeditor" rows="8" cols="40" style="padding:2px;"></textarea>
+    <input type="hidden" value="wymeditor" name="type"/>
+</form>
+
+<h4>Textarea</h4>
+<ul>
+
+    <li><b>Suggests words</b> as you type. <i>Enter</i> or <i>Tab</i> inserts the word.</li>
+    <li><i>CtrlKey</i> + <i>.</i> (dot key) opens up <b>additional menu</b>.</li>
+    <li>You can pop up suggestions with <i>CtrlKey</i> + <i>Space</i>.</li>
+</ul>
+
+<h4>Infobox</h4>
+<ul>
+    <li>You can <b>move around</b> holding <i>CtrlKey</i> (Up, Down, Left, Right).</li>
+    <li>You can insert the word with <i>Enter</i>, <i>Tab</i> or <i>LeftClick</i>.</li>
+    <li>You can <b>show synonyms</b> for the word with <i>CtrlKey</i> + <i>LeftClick</i>.</li>
+    <li>Is movable and resizable.</li>
+    <li>Remembers it's size and position.</li>
+</ul>
+
+<hr>
+
+<p>
+    There's also demonstration using plain <a href="/">Textarea</a>.
+</p>
+
+<h3>Disclaimer</h3>
+
+<p>I created this tool in May 2011 as a programming part of my <a
+        href="https://dip.felk.cvut.cz/browse/pdfcache/polcama1_2011bach.pdf"
+        title="Marek Polcar / Modulární editační komponenta pro ExtBrain">bachelor's thesis</a>.</p>
+
+<p>Some stuff might be outdated or not working properly with some browsers.</p>
+
+<p>For more <b>technical details</b> head to <a href="https://github.com/cilf/languator" title="Languator GitHub Page">Languator
+    GitHub Page</a>.
+
+<p>
+    Marek Polcar, 2011, <a href="http://cilf.cz" title="Marek Polcar Personal Page">cilf.cz</a><br>
+    The source code is licensed under <a href="https://github.com/cilf/languator/blob/master/license.md"
+                                         title="New BSD License">New BSD License</a>.
+</p>
+
+<a href="https://github.com/cilf/languator"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                                 src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                                                 alt="Fork me on GitHub"></a>
+<script type="text/javascript">
+    $(function () {
+        $('.wymeditor').wymeditor({
+            postInit: function (wym) {
+                wym.languator();
+            }
+        });
+    });
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-19819250-3', 'cilf.cz');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
